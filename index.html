@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Lane • Interactive Story Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00f0ff" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="#00f0ff" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#00f0ff" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                <span>Memory Lane</span>
+            </div>
+            <div class="nav-title">Interactive Story Gallery</div>
+
+            <div class="nav-controls">
+                <button id="music-toggle" class="glass-btn" title="Toggle Background Music">
+                    <svg id="music-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18V6L21 3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="18" cy="15" r="3" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+
+                <button id="fullscreen-btn" class="glass-btn" title="Toggle Fullscreen">
+                    <svg id="fullscreen-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 3H21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 21H3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 15V21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 9V3H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <button id="video-mute-btn" class="glass-btn" title="Mute Videos">
+                    <svg id="mute-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 5L6 9H2V15H6L11 19V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19 9L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M23 5L17 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN SLIDER -->
+    <div class="slider-container" id="slider-container">
+        
+        <!-- Loading -->
+        <div id="loader" class="loader">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Loading your memories...</p>
+        </div>
+
+        <!-- Slides Wrapper -->
+        <div class="slides-wrapper" id="slides-wrapper"></div>
+
+        <!-- Previous Button -->
+        <button class="slider-btn prev-btn glass-btn" id="prev-btn" aria-label="Previous">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <!-- Next Button -->
+        <button class="slider-btn next-btn glass-btn" id="next-btn" aria-label="Next">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <!-- Timeline Dots -->
+        <div class="timeline-dots" id="timeline-dots"></div>
+
+        <!-- Pause Indicator -->
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-18.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
