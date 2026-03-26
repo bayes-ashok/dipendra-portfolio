@@ -1,66 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Lane</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ankara Dipendra</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/2.png" />
+  </head>
+  <body>
     <!-- Crystal Clear Transparent Navbar -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-controls">
-                <button id="music-toggle" class="glass-btn" title="Toggle Background Music">
-                    <svg id="music-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18V6L21 3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2"/>
-                        <circle cx="18" cy="15" r="3" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </button>
+      <div class="nav-container">
+        <div class="nav-controls">
+          <button
+            id="music-toggle"
+            class="glass-btn"
+            title="Toggle Background Music"
+          >
+            <svg
+              id="music-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 18V6L21 3V15"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="6"
+                cy="18"
+                r="3"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle
+                cx="18"
+                cy="15"
+                r="3"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
 
-                <button id="fullscreen-btn" class="glass-btn" title="Toggle Fullscreen">
-                    <svg id="fullscreen-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 3H21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M9 21H3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M21 15V21H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3 9V3H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
+          <button
+            id="fullscreen-btn"
+            class="glass-btn"
+            title="Toggle Fullscreen"
+          >
+            <svg
+              id="fullscreen-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 3H21V9"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 21H3V15"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 15V21H15"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M3 9V3H9"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
+      </div>
     </nav>
 
     <!-- Main Slider -->
     <div class="slider-container" id="slider-container">
-        <!-- Loader -->
-        <div id="loader" class="loader">
-            <div class="loader-spinner"></div>
-            <p class="loader-text">Loading your memories...</p>
-        </div>
+      <!-- Loader -->
+      <div id="loader" class="loader">
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Loading your memories...</p>
+      </div>
 
-        <!-- Slides -->
-        <div class="slides-wrapper" id="slides-wrapper"></div>
+      <!-- Slides -->
+      <div class="slides-wrapper" id="slides-wrapper"></div>
 
-        <!-- Prev / Next Buttons -->
-        <button class="slider-btn prev-btn glass-btn" id="prev-btn" aria-label="Previous">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
+      <!-- Prev / Next Buttons -->
+      <button
+        class="slider-btn prev-btn glass-btn"
+        id="prev-btn"
+        aria-label="Previous"
+      >
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15 18L9 12L15 6"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
 
-        <button class="slider-btn next-btn glass-btn" id="next-btn" aria-label="Next">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
+      <button
+        class="slider-btn next-btn glass-btn"
+        id="next-btn"
+        aria-label="Next"
+      >
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 6L15 12L9 18"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
     </div>
 
     <!-- Local Background Music -->
     <audio id="bg-music" loop>
-        <source src="img/music.mp3" type="audio/mpeg">
+      <source src="img/music.mp3" type="audio/mpeg" />
     </audio>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
