@@ -1,10 +1,11 @@
 // script.js - Crystal clear version
 
 const slidesData = [
+    { type: "image", src: "img/family.png" },
     { type: "image", src: "img/img.png" },
     { type: "image", src: "img/afa.jpg" },
-    { type: "image", src: "img/agah.jpg" },
     { type: "video", src: "img/VID_20260325_193913.mp4" },
+    { type: "image", src: "img/agah.jpg" },
     { type: "image", src: "img/3.png" },
     { type: "image", src: "img/hag.jpg" },
     { type: "video", src: "img/VID-20260325-WA0003.mp4" },
