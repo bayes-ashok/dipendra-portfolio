@@ -1,6 +1,7 @@
 // script.js - Crystal clear version
 
 const slidesData = [
+    { type: "image", src: "img/img.png" },
     { type: "image", src: "img/afa.jpg" },
     { type: "image", src: "img/agah.jpg" },
     { type: "video", src: "img/VID_20260325_193913.mp4" },
@@ -10,7 +11,6 @@ const slidesData = [
     { type: "image", src: "img/1.jpg" },
     { type: "video", src: "img/Snapchat-2038632051.mp4" },
     { type: "image", src: "img/2.png" },
-    { type: "image", src: "img/img.png" },
     { type: "video", src: "img/Snapchat-767716306.mp4" },
     { type: "video", src: "img/VID_20251108_235023.mp4" },
     { type: "video", src: "img/VID_20251129_084218_830.mp4" },
